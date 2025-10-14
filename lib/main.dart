@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'core/router/app_router.dart';
+import 'core/theme/colors_app.dart';
 import 'features/onboarding/ui/onboading_screen.dart';
 
 void main() {
@@ -19,11 +20,9 @@ class MyApp extends StatelessWidget {
       minTextAdapt: true,
       builder: (context, child) => MaterialApp.router(
         routerConfig: AppRouter.router,
-        
+
         debugShowCheckedModeBanner: false,
-        theme: ThemeData(
-          colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        ),
+        theme: ThemeData(scaffoldBackgroundColor: ColorsApp.white),
       ),
     );
   }

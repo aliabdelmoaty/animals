@@ -31,6 +31,11 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w500,
     height: 1.60,
   );
+  static TextStyle get s18w700 => GoogleFonts.poppins(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w700,
+    height: 1.60,
+  );
   static TextStyle get s14w600 =>
       GoogleFonts.poppins(fontSize: 14.sp, fontWeight: FontWeight.w600);
   static TextStyle get s28w700 =>
