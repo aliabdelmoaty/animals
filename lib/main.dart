@@ -26,5 +26,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-// Removed sample counter screen; using OnboardingScreen as home
