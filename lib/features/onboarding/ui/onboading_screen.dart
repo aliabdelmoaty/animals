@@ -1,7 +1,9 @@
 import 'package:animals/core/widgets/button_app.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 
+import '../../../core/router/router_names.dart';
 import '../../../core/theme/colors_app.dart';
 import '../../../core/utils/assets_path.dart';
 import '../../../core/theme/text_styles.dart';
@@ -35,7 +37,9 @@ class OnboardingScreen extends StatelessWidget {
               SizedBox(height: 24.h),
               Spacer(),
               ButtonApp(
-                onPressed: () {},
+                onPressed: () {
+                  context.push(RouterNames.home);
+                },
                 text: 'Get started',
                 icon: Icons.pets_outlined,
               ),

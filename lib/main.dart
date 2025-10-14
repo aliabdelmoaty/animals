@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+import 'core/router/app_router.dart';
 import 'features/onboarding/ui/onboading_screen.dart';
 
 void main() {
@@ -15,14 +17,14 @@ class MyApp extends StatelessWidget {
     return ScreenUtilInit(
       designSize: const Size(390, 844),
       minTextAdapt: true,
-      builder: (context, child) => MaterialApp(
+      builder: (context, child) => MaterialApp.router(
+        routerConfig: AppRouter.router,
+        
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         ),
-        home: child,
       ),
-      child: const OnboardingScreen(),
     );
   }
 }

@@ -5,4 +5,8 @@ abstract class AssetPaths {
 class _Images {
   const _Images();
   final String dogandcat = 'assets/images/dogandcat.png';
+  final String home = 'assets/images/home.png';
+  final String favorite = 'assets/images/heart.png';
+  final String message = 'assets/images/messages.png';
+  final String profile = 'assets/images/profile.png';
 }
