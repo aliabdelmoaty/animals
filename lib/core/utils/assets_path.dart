@@ -9,4 +9,5 @@ class _Images {
   final String favorite = 'assets/images/heart.png';
   final String message = 'assets/images/messages.png';
   final String profile = 'assets/images/profile.png';
+  final String location = 'assets/images/location.png';
 }

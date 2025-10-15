@@ -22,6 +22,13 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w400,
     height: 1.60,
   );
+  static TextStyle get s18w400 => GoogleFonts.poppins(
+    fontSize: 18.sp,
+    fontWeight: FontWeight.w400,
+    height: 1.60,
+  );
+  static TextStyle get s10w400 =>
+      GoogleFonts.poppins(fontSize: 10.sp, fontWeight: FontWeight.w400);
   static TextStyle get s14w400 =>
       GoogleFonts.poppins(fontSize: 14.sp, fontWeight: FontWeight.w400);
 
@@ -36,10 +43,19 @@ abstract class AppTextStyles {
     fontWeight: FontWeight.w700,
     height: 1.60,
   );
+  static TextStyle get s16w500 => GoogleFonts.poppins(
+    fontSize: 16.sp,
+    fontWeight: FontWeight.w500,
+    height: 1.60,
+  );
   static TextStyle get s14w600 =>
       GoogleFonts.poppins(fontSize: 14.sp, fontWeight: FontWeight.w600);
+  static TextStyle get s26w700 =>
+      GoogleFonts.poppins(fontSize: 26.sp, fontWeight: FontWeight.w700);
   static TextStyle get s28w700 =>
       GoogleFonts.poppins(fontSize: 28.sp, fontWeight: FontWeight.w700);
+  static TextStyle get s22w600 =>
+      GoogleFonts.poppins(fontSize: 22.sp, fontWeight: FontWeight.w600);
 }
 
 extension TextStyleX on TextStyle {

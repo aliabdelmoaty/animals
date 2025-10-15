@@ -11,6 +11,8 @@ abstract class ColorsApp {
   static const powderBlue = Color(0xFFE1F8F9);
   static const dimGray = Color(0xFF636363);
   static const tomatoRed = Color(0xFFEF594A);
+  static const slateGray = Color(0xFF8B9298);
+
 
 
 

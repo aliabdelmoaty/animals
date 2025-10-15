@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../core/theme/colors_app.dart';
 import '../../../core/theme/text_styles.dart';
+import '../../../core/utils/constants.dart';
 import 'widgets/item_cart.dart';
 import 'widgets/tabs_categories.dart';
 import 'widgets/text_from_field_search.dart';
@@ -13,14 +14,7 @@ class HomeScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final List<String> categories = [
-      'All',
-      'Dog',
-      'Cat',
-      'Bird',
-      'Fish',
-      'Reptile',
-    ];
+    final categories = Constants.categories;
     return DefaultTabController(
       length: categories.length,
       child: SafeArea(
@@ -68,5 +62,6 @@ class HomeScreen extends StatelessWidget {
         ),
       ),
     );
-  }
+    
+    }
 }
