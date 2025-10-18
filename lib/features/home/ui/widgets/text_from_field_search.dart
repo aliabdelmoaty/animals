@@ -6,13 +6,16 @@ import '../../../../core/theme/colors_app.dart';
 import '../../../../core/theme/text_styles.dart';
 
 class TextFromFieldSearch extends StatelessWidget {
-  const TextFromFieldSearch({super.key});
+  final ValueChanged<String>? onChanged;
+
+  const TextFromFieldSearch({super.key, this.onChanged});
 
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      onChanged: onChanged,
       decoration: InputDecoration(
-        hintText: 'Search',
+        hintText: 'Search breeds...',
         filled: true,
         fillColor: ColorsApp.gray.withValues(alpha: 0.1),
         hintStyle: AppTextStyles.s16w400.c(ColorsApp.gray),
