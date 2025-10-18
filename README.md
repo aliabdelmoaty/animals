@@ -315,12 +315,3 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 - Clean Architecture principles by Uncle Bob
 - Flutter community for packages and support
 
----
-
-**Built with ❤️ using Flutter & Clean Architecture**
-
-For more information, check out:
-- [IMPLEMENTATION.md](IMPLEMENTATION.md) - Technical implementation details
-- [FAVORITES_AND_DETAILS.md](FAVORITES_AND_DETAILS.md) - Favorites and details features
-- [TESTING.md](TESTING.md) - Comprehensive testing guide
-- [GIT_WORKFLOW.md](GIT_WORKFLOW.md) - Git workflow and best practices
