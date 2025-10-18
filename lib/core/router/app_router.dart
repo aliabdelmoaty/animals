@@ -1,6 +1,7 @@
 import 'package:go_router/go_router.dart';
 
 import '../../features/favorite/ui/favorite_screen.dart';
+import '../../features/home/domain/entities/breed_entity.dart';
 import '../widgets/app_shell.dart';
 import 'router_names.dart';
 import '../../features/details/ui/details_screen.dart';
@@ -38,10 +39,12 @@ abstract class AppRouter {
         path: RouterNames.onboarding,
         builder: (context, state) => const OnboardingScreen(),
       ),
-
       GoRoute(
         path: RouterNames.details,
-        builder: (context, state) => const DetailsScreen(),
+        builder: (context, state) {
+          final breed = state.extra as BreedEntity;
+          return DetailsScreen(breed: breed);
+        },
       ),
     ],
   );

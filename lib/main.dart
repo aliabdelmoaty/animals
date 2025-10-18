@@ -1,11 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+import 'core/di/dependency_injection.dart';
 import 'core/router/app_router.dart';
 import 'core/theme/colors_app.dart';
-import 'features/onboarding/ui/onboading_screen.dart';
 
-void main() {
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Load environment variables
+  await dotenv.load(fileName: ".env");
+
+  // Setup dependency injection
+  await setupDependencyInjection();
+
   runApp(const MyApp());
 }
 

@@ -1,15 +1,36 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../core/di/dependency_injection.dart';
 import '../../../core/theme/colors_app.dart';
 import '../../../core/theme/text_styles.dart';
-import '../../../core/utils/assets_path.dart';
+import '../../../core/utils/extensions/image_url_extension.dart';
 import '../../../core/widgets/button_app.dart';
+import '../../home/domain/entities/breed_entity.dart';
+import '../../home/presentation/cubit/breeds_cubit.dart';
 
 class DetailsScreen extends StatelessWidget {
-  const DetailsScreen({super.key});
+  final BreedEntity breed;
+
+  const DetailsScreen({super.key, required this.breed});
+
+  @override
+  Widget build(BuildContext context) {
+    return BlocProvider(
+      create: (context) => getIt<BreedsCubit>()..fetchBreeds(refresh: true),
+      child: DetailsScreenContent(breed: breed),
+    );
+  }
+}
+
+class DetailsScreenContent extends StatelessWidget {
+  final BreedEntity breed;
+
+  const DetailsScreenContent({super.key, required this.breed});
 
   @override
   Widget build(BuildContext context) {
@@ -22,14 +43,20 @@ class DetailsScreen extends StatelessWidget {
           onPressed: () {
             context.pop();
           },
-          icon: Icon(Icons.arrow_back_ios_new_outlined),
+          icon: const Icon(Icons.arrow_back_ios_new_outlined),
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              context.read<BreedsCubit>().toggleFavorite(breed);
+            },
             icon: Icon(
-              CupertinoIcons.heart,
-              color: ColorsApp.verdigris,
+              breed.isFavorite
+                  ? CupertinoIcons.heart_fill
+                  : CupertinoIcons.heart,
+              color: breed.isFavorite
+                  ? ColorsApp.tomatoRed
+                  : ColorsApp.verdigris,
               size: 24.r,
             ),
           ),
@@ -52,7 +79,26 @@ class DetailsScreen extends StatelessWidget {
                   ),
                 ),
               ),
-              child: Image.asset(AssetPaths.images.dogandcat),
+              child: breed.referenceImageId != null
+                  ? CachedNetworkImage(
+                      imageUrl: breed.referenceImageId!.toImageUrl(),
+                      fit: BoxFit.cover,
+                      placeholder: (context, url) => Center(
+                        child: CircularProgressIndicator(
+                          color: ColorsApp.verdigris,
+                        ),
+                      ),
+                      errorWidget: (context, url, error) => Icon(
+                        CupertinoIcons.photo,
+                        size: 64.r,
+                        color: ColorsApp.gray,
+                      ),
+                    )
+                  : Icon(
+                      CupertinoIcons.photo,
+                      size: 64.r,
+                      color: ColorsApp.gray,
+                    ),
             ),
             SizedBox(height: 25.h),
             Padding(
@@ -60,35 +106,75 @@ class DetailsScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  PetDetailsHeader(),
+                  PetDetailsHeader(breed: breed),
                   SizedBox(height: 20.h),
                   Padding(
                     padding: EdgeInsets.symmetric(horizontal: 15.w),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        InfoCard(text1: 'Gender', text2: 'Male'),
-                        InfoCard(text1: 'Age', text2: '1 Year'),
-                        InfoCard(text1: 'Weight', text2: '10 kg'),
+                        InfoCard(text1: 'Origin', text2: breed.origin),
+                        InfoCard(
+                          text1: 'Life Span',
+                          text2: '${breed.lifeSpan} yrs',
+                        ),
+                        InfoCard(
+                          text1: 'Weight',
+                          text2: '${breed.weight.metric} kg',
+                        ),
                       ],
                     ),
+                  ),
+                  SizedBox(height: 20.h),
+                  Text(
+                    'Temperament:',
+                    style: AppTextStyles.s22w600.c(ColorsApp.richBlack),
+                  ),
+                  SizedBox(height: 8.h),
+                  Wrap(
+                    spacing: 8.w,
+                    runSpacing: 8.h,
+                    children: breed.temperament
+                        .split(',')
+                        .map(
+                          (trait) => Chip(
+                            label: Text(
+                              trait.trim(),
+                              style: AppTextStyles.s14w400.c(
+                                ColorsApp.verdigris,
+                              ),
+                            ),
+                            backgroundColor: ColorsApp.powderBlue,
+                            side: BorderSide.none,
+                          ),
+                        )
+                        .toList(),
                   ),
                   SizedBox(height: 20.h),
                   Text(
                     'About:',
                     style: AppTextStyles.s22w600.c(ColorsApp.richBlack),
                   ),
+                  SizedBox(height: 8.h),
                   Text(
-                    'Tom is a playful and loyal Golden Retriever who loves being around people.  He’s 1 years old, full of energy, and always ready for a game of fetch.  Tom enjoys morning walks, belly rubs, and taking long naps after playtime.  He’s gentle with kids, gets along well with other pets, and makes the perfect family companion.',
+                    breed.description,
                     style: AppTextStyles.s16w400.c(ColorsApp.dimGray),
                     textAlign: TextAlign.justify,
                   ),
                   SizedBox(height: 20.h),
+                  _buildCharacteristics(),
+                  SizedBox(height: 20.h),
                   ButtonApp(
                     onPressed: () {
-                      // context.push(RouterNames.home);
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          content: Text('Adoption feature coming soon!'),
+                          backgroundColor: ColorsApp.verdigris,
+                          behavior: SnackBarBehavior.floating,
+                        ),
+                      );
                     },
-                    text: 'Adopt me',
+                    text: 'Adopt ${breed.name}',
                   ),
                   SizedBox(height: 20.h),
                 ],
@@ -96,6 +182,59 @@ class DetailsScreen extends StatelessWidget {
             ),
           ],
         ),
+      ),
+    );
+  }
+
+  Widget _buildCharacteristics() {
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text(
+          'Characteristics:',
+          style: AppTextStyles.s22w600.c(ColorsApp.richBlack),
+        ),
+        SizedBox(height: 12.h),
+        _buildRatingRow('Adaptability', breed.adaptability),
+        _buildRatingRow('Affection Level', breed.affectionLevel),
+        _buildRatingRow('Child Friendly', breed.childFriendly),
+        _buildRatingRow('Dog Friendly', breed.dogFriendly),
+        _buildRatingRow('Energy Level', breed.energyLevel),
+        _buildRatingRow('Intelligence', breed.intelligence),
+        _buildRatingRow('Social Needs', breed.socialNeeds),
+      ],
+    );
+  }
+
+  Widget _buildRatingRow(String label, int rating) {
+    return Padding(
+      padding: EdgeInsets.symmetric(vertical: 6.h),
+      child: Row(
+        children: [
+          Expanded(
+            flex: 2,
+            child: Text(
+              label,
+              style: AppTextStyles.s14w400.c(ColorsApp.dimGray),
+            ),
+          ),
+          Expanded(
+            flex: 3,
+            child: Row(
+              children: List.generate(
+                5,
+                (index) => Padding(
+                  padding: EdgeInsets.only(right: 4.w),
+                  child: Icon(
+                    index < rating ? Icons.star : Icons.star_border,
+                    size: 18.r,
+                    color: ColorsApp.verdigris,
+                  ),
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
@@ -130,43 +269,40 @@ class InfoCard extends StatelessWidget {
 }
 
 class PetDetailsHeader extends StatelessWidget {
-  const PetDetailsHeader({super.key});
+  final BreedEntity breed;
+
+  const PetDetailsHeader({super.key, required this.breed});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.start,
-      crossAxisAlignment: CrossAxisAlignment.center,
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Text(
-              'Dog and Cat',
-              style: AppTextStyles.s18w700.c(ColorsApp.richBlack),
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                ImageIcon(
-                  AssetImage(AssetPaths.images.location),
-                  size: 14.r,
-                  color: ColorsApp.tomatoRed,
-                ),
-                SizedBox(width: 4.w),
+        Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                breed.name,
+                style: AppTextStyles.s24w700.c(ColorsApp.richBlack),
+              ),
+              SizedBox(height: 4.h),
+              Text(
+                'Origin: ${breed.origin}',
+                style: AppTextStyles.s16w400.c(ColorsApp.dimGray),
+              ),
+              if (breed.altNames.isNotEmpty) ...[
+                SizedBox(height: 2.h),
                 Text(
-                  '1.6 km away',
-                  style: AppTextStyles.s18w400.c(ColorsApp.dimGray),
+                  'Also known as: ${breed.altNames}',
+                  style: AppTextStyles.s14w400.c(ColorsApp.gray),
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                 ),
               ],
-            ),
-          ],
-        ),
-        Spacer(),
-        Text(
-          '\$95',
-          textAlign: TextAlign.center,
-          style: AppTextStyles.s26w700.c(ColorsApp.verdigris),
+            ],
+          ),
         ),
       ],
     );

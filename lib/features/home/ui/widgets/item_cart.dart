@@ -1,3 +1,4 @@
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -6,16 +7,20 @@ import 'package:go_router/go_router.dart';
 import '../../../../core/router/router_names.dart';
 import '../../../../core/theme/colors_app.dart';
 import '../../../../core/theme/text_styles.dart';
-import '../../../../core/utils/assets_path.dart';
+import '../../../../core/utils/extensions/image_url_extension.dart';
+import '../../domain/entities/breed_entity.dart';
 
 class ItemCart extends StatelessWidget {
-  const ItemCart({super.key});
+  final BreedEntity breed;
+  final VoidCallback? onFavoriteToggle;
+
+  const ItemCart({super.key, required this.breed, this.onFavoriteToggle});
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        context.push(RouterNames.details);
+        context.push(RouterNames.details, extra: breed);
       },
       child: Card(
         elevation: 2,
@@ -31,7 +36,6 @@ class ItemCart extends StatelessWidget {
               Container(
                 height: 100.h,
                 width: 100.w,
-
                 clipBehavior: Clip.antiAlias,
                 decoration: ShapeDecoration(
                   color: ColorsApp.powderBlue,
@@ -39,48 +43,73 @@ class ItemCart extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8.r),
                   ),
                 ),
-                child: Image.asset(AssetPaths.images.dogandcat),
+                child: breed.referenceImageId != null
+                    ? CachedNetworkImage(
+                        imageUrl: breed.referenceImageId!.toImageUrl(),
+                        fit: BoxFit.cover,
+                        placeholder: (context, url) => Center(
+                          child: CircularProgressIndicator(
+                            strokeWidth: 2,
+                            color: ColorsApp.verdigris,
+                          ),
+                        ),
+                        errorWidget: (context, url, error) => Icon(
+                          CupertinoIcons.photo,
+                          size: 40.r,
+                          color: ColorsApp.gray,
+                        ),
+                      )
+                    : Icon(
+                        CupertinoIcons.photo,
+                        size: 40.r,
+                        color: ColorsApp.gray,
+                      ),
               ),
               SizedBox(width: 10.w),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Dog and Cat',
-                    style: AppTextStyles.s18w700.c(ColorsApp.richBlack),
-                  ),
-                  Text(
-                    'Dog and Cat',
-                    style: AppTextStyles.s14w400.c(ColorsApp.dimGray),
-                  ),
-                  Text(
-                    '5 Months Old',
-                    style: AppTextStyles.s14w400.c(ColorsApp.dimGray),
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      ImageIcon(
-                        AssetImage(AssetPaths.images.location),
-                        size: 14.r,
-                        color: ColorsApp.tomatoRed,
-                      ),
-                      SizedBox(width: 4.w),
-                      Text(
-                        '1.6 km away',
-                        style: AppTextStyles.s14w400.c(ColorsApp.dimGray),
-                      ),
-                    ],
-                  ),
-                ],
+              Expanded(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      breed.name,
+                      style: AppTextStyles.s18w700.c(ColorsApp.richBlack),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      breed.origin,
+                      style: AppTextStyles.s14w400.c(ColorsApp.dimGray),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                    Text(
+                      '${breed.lifeSpan} years',
+                      style: AppTextStyles.s14w400.c(ColorsApp.dimGray),
+                    ),
+                    SizedBox(height: 4.h),
+                    Text(
+                      breed.temperament.split(',').take(2).join(', '),
+                      style: AppTextStyles.s10w400.c(ColorsApp.gray),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
+                    ),
+                  ],
+                ),
               ),
-              Spacer(),
+              SizedBox(width: 8.w),
               Align(
                 alignment: Alignment.topRight,
-                child: Icon(
-                  CupertinoIcons.heart,
-                  size: 24.r,
-                  color: ColorsApp.verdigris,
+                child: InkWell(
+                  onTap: onFavoriteToggle,
+                  child: Icon(
+                    breed.isFavorite
+                        ? CupertinoIcons.heart_fill
+                        : CupertinoIcons.heart,
+                    size: 24.r,
+                    color: breed.isFavorite
+                        ? ColorsApp.tomatoRed
+                        : ColorsApp.verdigris,
+                  ),
                 ),
               ),
             ],

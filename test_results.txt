@@ -1,0 +1,245 @@
+00:00 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:01 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:02 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:03 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:04 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:05 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:06 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:07 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:08 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:09 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:10 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:11 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:12 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:13 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:14 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:15 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:16 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:17 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:18 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:19 +0: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart                                                                         00:19 +0: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart: GetBreedsUseCase should get breeds from repository                             00:19 +1: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart: GetBreedsUseCase should get breeds from repository                             00:19 +1: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart: GetBreedsUseCase should return failure when repository fails                   00:19 +2: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart: GetBreedsUseCase should return failure when repository fails                   00:19 +2: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart: GetBreedsUseCase should handle pagination correctly                            00:19 +3: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart: GetBreedsUseCase should handle pagination correctly                            00:20 +3: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/get_breeds_usecase_test.dart: GetBreedsUseCase should handle pagination correctly                            00:20 +3: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/search_breeds_usecase_test.dart                                                                      00:20 +3: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/search_breeds_usecase_test.dart: SearchBreedsUseCase should search breeds from repository                    00:20 +4: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/search_breeds_usecase_test.dart: SearchBreedsUseCase should search breeds from repository                    00:20 +4: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/search_breeds_usecase_test.dart: SearchBreedsUseCase should return failure when repository fails             00:20 +5: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/search_breeds_usecase_test.dart: SearchBreedsUseCase should return failure when repository fails             00:20 +5: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/search_breeds_usecase_test.dart: SearchBreedsUseCase should handle empty search results                      00:20 +5 -1: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/search_breeds_usecase_test.dart: SearchBreedsUseCase should handle empty search results [E]               
+  Expected: Right<dynamic, List<dynamic>>:<Right([])>
+    Actual: Right<Failure, List<BreedEntity>>:<Right([])>
+  
+  package:matcher                                                           expect
+  package:flutter_test/src/widget_tester.dart 473:18                        expect
+  test/features/home/domain/usecases/search_breeds_usecase_test.dart 101:7  main.<fn>.<fn>
+  
+
+To run this test again: /mnt/E/ali/flutter-system/flutter_linux_3.35.4-stable/flutter/bin/cache/dart-sdk/bin/dart test /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/domain/usecases/search_breeds_usecase_test.dart -p vm --plain-name 'SearchBreedsUseCase should handle empty search results'
+test/features/home/ui/home_screen_test.dart:14:8: Error: Error when reading 'test/features/home/ui/home_screen_test.mocks.dart': No such file or directory
+import 'home_screen_test.mocks.dart';
+       ^
+00:23 +5 -1: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart                                                                         00:23 +5 -1: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: BreedsCubit initial state should be BreedsInitial                              00:23 +6 -1: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: BreedsCubit initial state should be BreedsInitial                              00:23 +6 -1: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: BreedsCubit emits [BreedsLoading, BreedsLoaded] when fetchBreeds succeeds      00:23 +6 -2: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: BreedsCubit emits [BreedsLoading, BreedsLoaded] when fetchBreeds succeeds [E]  
+  Expected: [
+              BreedsLoading:BreedsLoading(),
+              BreedsLoaded:BreedsLoaded([BreedEntity(1, Persian, WeightEntity(7-10, 3-5), null, null, null, Calm, Gentle, Iran, IR, IR, A beautiful cat, 12-15, 1, null, , 5, 5, 4, 3, 3, 5, 2, 4, 4, 4, 3, 2, 0, 0, 1, 0, 0, 0, 0, null, 0, abc123, false)], true, 0, [])
+            ]
+    Actual: [
+              BreedsLoading:BreedsLoading(),
+              BreedsLoaded:BreedsLoaded([BreedEntity(1, Persian, WeightEntity(7-10, 3-5), null, null, null, Calm, Gentle, Iran, IR, IR, A beautiful cat, 12-15, 1, null, , 5, 5, 4, 3, 3, 5, 2, 4, 4, 4, 3, 2, 0, 0, 1, 0, 0, 0, 0, null, 0, abc123, false)], false, 0, [])
+            ]
+     Which: at location [1] is BreedsLoaded:<BreedsLoaded([BreedEntity(1, Persian, WeightEntity(7-10, 3-5), null, null, null, Calm, Gentle, Iran, IR, IR, A beautiful cat, 12-15, 1, null, , 5, 5, 4, 3, 3, 5, 2, 4, 4, 4, 3, 2, 0, 0, 1, 0, 0, 0, 0, null, 0, abc123, false)], false, 0, [])> instead of BreedsLoaded:<BreedsLoaded([BreedEntity(1, Persian, WeightEntity(7-10, 3-5), null, null, null, Calm, Gentle, Iran, IR, IR, A beautiful cat, 12-15, 1, null, , 5, 5, 4, 3, 3, 5, 2, 4, 4, 4, 3, 2, 0, 0, 1, 0, 0, 0, 0, null, 0, abc123, false)], true, 0, [])>
+  
+  ==== diff ========================================
+  
+  [90m[BreedsLoading(), BreedsLoaded([BreedEntity(1, Persian, WeightEntity(7-10, 3-5), null, null, null, Calm, Gentle, Iran, IR, IR, A beautiful cat, 12-15, 1, null, , 5, 5, 4, 3, 3, 5, 2, 4, 4, 4, 3, 2, 0, 0, 1, 0, 0, 0, 0, null, 0, abc123, false)], [0m[31m[-tru-][0m[32m{+fals+}[0m[90me, 0, [])][0m
+  
+  ==== end diff ====================================
+  
+  package:bloc_test/src/bloc_test.dart 226:11  testBloc.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                   _Completer.completeError
+  package:bloc_test/src/bloc_test.dart 257:43  _runZonedGuarded.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                   _CustomZone.registerBinaryCallback
+  package:bloc_test/src/bloc_test.dart 254:5   _runZonedGuarded.<fn>
+  dart:async                                   runZonedGuarded
+  package:bloc_test/src/bloc_test.dart 253:3   _runZonedGuarded
+  package:bloc_test/src/bloc_test.dart 200:11  testBloc
+  package:bloc_test/src/bloc_test.dart 156:13  blocTest.<fn>
+  
+
+To run this test again: /mnt/E/ali/flutter-system/flutter_linux_3.35.4-stable/flutter/bin/cache/dart-sdk/bin/dart test /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart -p vm --plain-name 'BreedsCubit emits [BreedsLoading, BreedsLoaded] when fetchBreeds succeeds'
+00:23 +6 -2: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: BreedsCubit emits [BreedsLoading, BreedsError] when fetchBreeds fails          00:23 +7 -2: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: BreedsCubit emits [BreedsLoading, BreedsError] when fetchBreeds fails          00:23 +7 -2: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: ... emits [BreedsSearching, BreedsSearchLoaded] when searchBreeds succeeds     00:24 +7 -2: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: ... emits [BreedsSearching, BreedsSearchLoaded] when searchBreeds succeeds     test/features/home/ui/home_screen_test.dart:18:8: Error: 'MockBreedsCubit' isn't a type.
+  late MockBreedsCubit mockCubit;
+       ^^^^^^^^^^^^^^^
+test/features/home/ui/home_screen_test.dart:21:17: Error: Method not found: 'MockBreedsCubit'.
+    mockCubit = MockBreedsCubit();
+                ^^^^^^^^^^^^^^^
+00:24 +8 -2: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: ... emits [BreedsSearching, BreedsSearchLoaded] when searchBreeds succeeds     00:24 +8 -2: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: BreedsCubit emits nothing when search query is empty                           00:24 +8 -3: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart: BreedsCubit emits nothing when search query is empty [E]                       
+  Expected: [
+              BreedsLoading:BreedsLoading(),
+              BreedsLoaded:BreedsLoaded([BreedEntity(1, Persian, WeightEntity(7-10, 3-5), null, null, null, Calm, Gentle, Iran, IR, IR, A beautiful cat, 12-15, 1, null, , 5, 5, 4, 3, 3, 5, 2, 4, 4, 4, 3, 2, 0, 0, 1, 0, 0, 0, 0, null, 0, abc123, false)], true, 0, [])
+            ]
+    Actual: [
+              BreedsLoading:BreedsLoading(),
+              BreedsLoaded:BreedsLoaded([BreedEntity(1, Persian, WeightEntity(7-10, 3-5), null, null, null, Calm, Gentle, Iran, IR, IR, A beautiful cat, 12-15, 1, null, , 5, 5, 4, 3, 3, 5, 2, 4, 4, 4, 3, 2, 0, 0, 1, 0, 0, 0, 0, null, 0, abc123, false)], false, 0, [])
+            ]
+     Which: at location [1] is BreedsLoaded:<BreedsLoaded([BreedEntity(1, Persian, WeightEntity(7-10, 3-5), null, null, null, Calm, Gentle, Iran, IR, IR, A beautiful cat, 12-15, 1, null, , 5, 5, 4, 3, 3, 5, 2, 4, 4, 4, 3, 2, 0, 0, 1, 0, 0, 0, 0, null, 0, abc123, false)], false, 0, [])> instead of BreedsLoaded:<BreedsLoaded([BreedEntity(1, Persian, WeightEntity(7-10, 3-5), null, null, null, Calm, Gentle, Iran, IR, IR, A beautiful cat, 12-15, 1, null, , 5, 5, 4, 3, 3, 5, 2, 4, 4, 4, 3, 2, 0, 0, 1, 0, 0, 0, 0, null, 0, abc123, false)], true, 0, [])>
+  
+  ==== diff ========================================
+  
+  [90m[BreedsLoading(), BreedsLoaded([BreedEntity(1, Persian, WeightEntity(7-10, 3-5), null, null, null, Calm, Gentle, Iran, IR, IR, A beautiful cat, 12-15, 1, null, , 5, 5, 4, 3, 3, 5, 2, 4, 4, 4, 3, 2, 0, 0, 1, 0, 0, 0, 0, null, 0, abc123, false)], [0m[31m[-tru-][0m[32m{+fals+}[0m[90me, 0, [])][0m
+  
+  ==== end diff ====================================
+  
+  package:bloc_test/src/bloc_test.dart 226:11  testBloc.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                   _Completer.completeError
+  package:bloc_test/src/bloc_test.dart 257:43  _runZonedGuarded.<fn>
+  ===== asynchronous gap ===========================
+  dart:async                                   _CustomZone.registerBinaryCallback
+  package:bloc_test/src/bloc_test.dart 254:5   _runZonedGuarded.<fn>
+  dart:async                                   runZonedGuarded
+  package:bloc_test/src/bloc_test.dart 253:3   _runZonedGuarded
+  package:bloc_test/src/bloc_test.dart 200:11  testBloc
+  package:bloc_test/src/bloc_test.dart 156:13  blocTest.<fn>
+  
+
+To run this test again: /mnt/E/ali/flutter-system/flutter_linux_3.35.4-stable/flutter/bin/cache/dart-sdk/bin/dart test /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/presentation/cubit/breeds_cubit_test.dart -p vm --plain-name 'BreedsCubit emits nothing when search query is empty'
+00:27 +8 -4: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/home_screen_test.dart [E]                                                                                      
+  Failed to load "/mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/home_screen_test.dart":
+  Compilation failed for testPath=/mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/home_screen_test.dart: test/features/home/ui/home_screen_test.dart:14:8: Error: Error when reading 'test/features/home/ui/home_screen_test.mocks.dart': No such file or directory
+  import 'home_screen_test.mocks.dart';
+         ^
+  test/features/home/ui/home_screen_test.dart:18:8: Error: 'MockBreedsCubit' isn't a type.
+    late MockBreedsCubit mockCubit;
+         ^^^^^^^^^^^^^^^
+  test/features/home/ui/home_screen_test.dart:21:17: Error: Method not found: 'MockBreedsCubit'.
+      mockCubit = MockBreedsCubit();
+                  ^^^^^^^^^^^^^^^
+  .
+
+To run this test again: /mnt/E/ali/flutter-system/flutter_linux_3.35.4-stable/flutter/bin/cache/dart-sdk/bin/dart test /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/home_screen_test.dart -p vm --plain-name 'loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/home_screen_test.dart'
+00:36 +8 -4: loading /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart                                                                                    00:36 +8 -4: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart: ItemCart Widget Tests displays breed name correctly                                       00:37 +8 -4: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart: ItemCart Widget Tests displays breed name correctly                                       00:38 +8 -4: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart: ItemCart Widget Tests displays breed name correctly                                       00:38 +9 -4: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart: Counter increments smoke test                                                                                         00:38 +10 -4: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart: Counter increments smoke test                                                                                        00:38 +11 -4: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart: Counter increments smoke test                                                                                        00:38 +11 -4: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart: ItemCart Widget Tests displays favorite icon empty when not favorited                    
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _WidgetPredicateWidgetFinder:<Found 0 widgets with widget matching predicate: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure> (file:///mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart:90:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart line 90
+The test description was:
+  displays favorite icon empty when not favorited
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:38 +11 -5: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart: ItemCart Widget Tests displays favorite icon empty when not favorited [E]                
+  Test failed. See exception logs above.
+  The test description was: displays favorite icon empty when not favorited
+  
+
+To run this test again: /mnt/E/ali/flutter-system/flutter_linux_3.35.4-stable/flutter/bin/cache/dart-sdk/bin/dart test /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart -p vm --plain-name 'ItemCart Widget Tests displays favorite icon empty when not favorited'
+00:38 +11 -5: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart: ItemCart Widget Tests displays favorite icon filled when favorited                       
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _WidgetPredicateWidgetFinder:<Found 0 widgets with widget matching predicate: []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure>.<anonymous closure> (file:///mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart:104:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart line 104
+The test description was:
+  displays favorite icon filled when favorited
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:38 +11 -6: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart: ItemCart Widget Tests displays favorite icon filled when favorited [E]                   
+  Test failed. See exception logs above.
+  The test description was: displays favorite icon filled when favorited
+  
+
+To run this test again: /mnt/E/ali/flutter-system/flutter_linux_3.35.4-stable/flutter/bin/cache/dart-sdk/bin/dart test /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart -p vm --plain-name 'ItemCart Widget Tests displays favorite icon filled when favorited'
+00:39 +11 -6: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart: ItemCart Widget Tests calls onFavoriteToggle when heart icon is tapped                   
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following assertion was thrown running a test:
+The finder "Found 0 widgets with widget matching predicate: []" (used in a call to "tap()") could
+not find any matching widgets.
+
+When the exception was thrown, this was the stack:
+#0      WidgetController._getElementPoint (package:flutter_test/src/controller.dart:2009:7)
+#1      WidgetController.getCenter (package:flutter_test/src/controller.dart:1861:12)
+#2      WidgetController.tap (package:flutter_test/src/controller.dart:1041:7)
+#3      main.<anonymous closure>.<anonymous closure> (file:///mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart:126:20)
+<asynchronous suspension>
+#4      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#5      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+The test description was:
+  calls onFavoriteToggle when heart icon is tapped
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:39 +11 -7: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart: ItemCart Widget Tests calls onFavoriteToggle when heart icon is tapped [E]               
+  Test failed. See exception logs above.
+  The test description was: calls onFavoriteToggle when heart icon is tapped
+  
+
+To run this test again: /mnt/E/ali/flutter-system/flutter_linux_3.35.4-stable/flutter/bin/cache/dart-sdk/bin/dart test /mnt/E/ali/flutter/omarAhmedProjects/animals/test/features/home/ui/widgets/item_cart_test.dart -p vm --plain-name 'ItemCart Widget Tests calls onFavoriteToggle when heart icon is tapped'
+00:39 +12 -7: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart: Counter increments smoke test                                                                                        00:39 +13 -7: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart: Counter increments smoke test                                                                                        00:40 +13 -7: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart: Counter increments smoke test                                                                                        00:40 +13 -7: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart: Counter increments smoke test                                                                                        
+══╡ EXCEPTION CAUGHT BY RENDERING LIBRARY ╞═════════════════════════════════════════════════════════
+The following assertion was thrown during layout:
+A RenderFlex overflowed by 172 pixels on the bottom.
+
+The relevant error-causing widget was:
+  Column
+  Column:file:///mnt/E/ali/flutter/omarAhmedProjects/animals/lib/features/onboarding/ui/onboading_screen.dart:20:18
+
+The overflowing RenderFlex has an orientation of Axis.vertical.
+The edge of the RenderFlex that is overflowing has been marked in the rendering with a yellow and
+black striped pattern. This is usually caused by the contents being too big for the RenderFlex.
+Consider applying a flex factor (e.g. using an Expanded widget) to force the children of the
+RenderFlex to fit within the available space instead of being sized to their natural size.
+This is considered an error condition because it indicates that there is content that cannot be
+seen. If the content is legitimately bigger than the available space, consider clipping it with a
+ClipRect widget before putting it in the flex, or using a scrollable container rather than a Flex,
+like a ListView.
+The specific RenderFlex in question is: RenderFlex#b65e3 relayoutBoundary=up3 OVERFLOWING:
+  creator: Column ← Padding ← MediaQuery ← Padding ← SafeArea ← KeyedSubtree-[GlobalKey#ae8bc] ←
+    _BodyBuilder ← MediaQuery ← LayoutId-[<_ScaffoldSlot.body>] ← CustomMultiChildLayout ←
+    _ActionsScope ← Actions ← ⋯
+  parentData: offset=Offset(41.0, 0.0) (can use size)
+  constraints: BoxConstraints(0.0<=w<=717.9, 0.0<=h<=600.0)
+  size: Size(717.9, 600.0)
+  direction: vertical
+  mainAxisAlignment: start
+  mainAxisSize: max
+  crossAxisAlignment: center
+  verticalDirection: down
+  spacing: 0.0
+◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤◢◤
+════════════════════════════════════════════════════════════════════════════════════════════════════
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextWidgetFinder:<Found 0 widgets with text "0": []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart:19:5)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1059:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart line 19
+The test description was:
+  Counter increments smoke test
+════════════════════════════════════════════════════════════════════════════════════════════════════
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following message was thrown:
+Multiple exceptions (2) were detected during the running of the current test, and at least one was
+unexpected.
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:40 +13 -8: /mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart: Counter increments smoke test [E]                                                                                    
+  Test failed. See exception logs above.
+  The test description was: Counter increments smoke test
+  
+
+To run this test again: /mnt/E/ali/flutter-system/flutter_linux_3.35.4-stable/flutter/bin/cache/dart-sdk/bin/dart test /mnt/E/ali/flutter/omarAhmedProjects/animals/test/widget_test.dart -p vm --plain-name 'Counter increments smoke test'
+00:41 +13 -8: Some tests failed.                                                                                                                                                                       
